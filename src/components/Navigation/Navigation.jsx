@@ -8,17 +8,16 @@ const buildLinkClass = ({ isActive }) => {
 
 function Navigation() {
   return (
-    <nav className={"nav"}>
-      <NavLink to="/" className={buildLinkClass}>
-        Home
-      </NavLink>
-      <NavLink to="/about" className={buildLinkClass}>
-        About
-      </NavLink>
-      <NavLink to="/products" className={buildLinkClass}>
-        Products
-      </NavLink>
-    </nav>
+    <header className={css.header}>
+      <nav className={css.nav}>
+        <NavLink to="/" className={buildLinkClass}>
+          Home
+        </NavLink>
+        <NavLink to="/movies" className={buildLinkClass}>
+          Movies
+        </NavLink>
+      </nav>
+    </header>
   );
 }
 

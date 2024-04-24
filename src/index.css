@@ -1,5 +1,4 @@
 body {
-  padding: 15px;
   font-family: sans-serif;
   line-height: 1.5;
 }
@@ -12,6 +11,10 @@ h5,
 h6,
 p {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 ul,

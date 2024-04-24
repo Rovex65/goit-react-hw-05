@@ -11,7 +11,7 @@ const options = {
 
 export async function fetchTrendingMovies() {
   const res = await axios.get("/trending/movie/week?language=en-US", options);
-  console.log(res);
+  return res.data;
 }
 
 export async function fetchSearchMovie(query, page = 1) {
@@ -19,26 +19,20 @@ export async function fetchSearchMovie(query, page = 1) {
     `/search/movie?query=${query}&include_adult=false&language=en-US&page=${page}`,
     options
   );
-  console.log(res);
+  return res.data;
 }
 
 export async function fetchMovieDetails(id) {
   const res = await axios.get(`/movie/${id}?language=en-US`, options);
-  console.log(res);
+  return res.data;
 }
 
 export async function fetchMovieCast(id) {
   const res = await axios.get(`/movie/${id}/credits?language=en-US`, options);
-  console.log(res);
+  return res.data;
 }
 
 export async function fetchMovieReviews(id) {
   const res = await axios.get(`/movie/${id}/reviews?language=en-US`, options);
-  console.log(res);
+  return res.data;
 }
-
-fetchTrendingMovies();
-fetchSearchMovie("interstellar");
-fetchMovieDetails(157336);
-fetchMovieCast(157336);
-fetchMovieReviews(157336);
