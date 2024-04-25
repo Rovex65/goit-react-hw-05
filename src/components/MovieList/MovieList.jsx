@@ -7,7 +7,7 @@ function MovieList({ movies }) {
       {movies.map((movie) => (
         <li key={movie.id}>
           <Link state={location} to={`/movies/${movie.id}`}>
-            <p>{movie.original_title}</p>
+            <p>{movie.title || movie.original_title}</p>
           </Link>
         </li>
       ))}
