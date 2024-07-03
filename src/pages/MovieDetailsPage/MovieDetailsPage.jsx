@@ -27,7 +27,7 @@ function MovieDetailsPage() {
           <p>{Number(movie.vote_average).toFixed(1)}</p>
           <h3>Overview</h3>
           <p>{movie.overview}</p>
-          <Outlet />;
+          <Outlet />
         </div>
       )}
     </section>
