@@ -11,7 +11,7 @@ function HomePage() {
         const res = await fetchTrendingMovies();
         setMovies(res.results);
       } catch (error) {
-        console.log(error);
+        alert(error);
       }
     }
 
